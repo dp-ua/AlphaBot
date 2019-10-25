@@ -6,18 +6,36 @@ void setup() {
 
 }
 
+void pause(long d){
+  delay(d);
+}
+
+void bleep(long d){
+  digitalWrite(13,HIGH);
+  delay(d);
+  digitalWrite(13,LOW);
+  delay(d);
+}
+
+
 void loop() {
-  digitalWrite(13,HIGH);
-  delay(1000);
-  digitalWrite(13,LOW);
-  delay(500);
-  digitalWrite(13,HIGH);
-  delay(250);
-  digitalWrite(13,LOW);
-  delay(250);
-  digitalWrite(13,HIGH);
-  delay(250);
-  digitalWrite(13,LOW);
-  delay(1000);
+  long sBeep=100;
+  long lBeep=500;
+  long pauseShort=250;
+  long pauseLong = 2000;
+
+  bleep(sBeep);
+  bleep(sBeep);
+  bleep(sBeep);
+  pause(pauseShort);
+  bleep(lBeep);
+  bleep(lBeep);
+  bleep(lBeep);
+  pause(pauseShort);
+  bleep(sBeep);
+  bleep(sBeep);
+  bleep(sBeep);
+
+  pause(pauseLong);
   // put your main code here, to run repeatedly:
 }
