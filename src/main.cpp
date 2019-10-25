@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include<AlphaBot.h>
 
 void setup() {
   // put your setup code here, to run once:
@@ -24,6 +25,10 @@ void loop() {
   long pauseShort=250;
   long pauseLong = 2000;
 
+  Serial.println("Short beep: "+ sBeep);
+  Serial.println("Long beep: "+ lBeep);
+  Serial.println("Pause: "+ pauseLong);
+  
   bleep(sBeep);
   bleep(sBeep);
   bleep(sBeep);
